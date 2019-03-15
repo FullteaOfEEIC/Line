@@ -1,8 +1,8 @@
 import requests
 import json
-from Line.keys import CHANNEL_ACCESS_TOKEN, to
+from Line.keys import CHANNEL_ACCESS_TOKEN, me
 
-def sendLINE(content,to=to,CHANNEL_ACCESS_TOKEN=CHANNEL_ACCESS_TOKEN):
+def sendLINE(content,to=me,CHANNEL_ACCESS_TOKEN=CHANNEL_ACCESS_TOKEN):
     #LINEアカウントにアクセスするためのトークン
 
 
