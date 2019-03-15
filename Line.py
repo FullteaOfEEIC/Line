@@ -1,6 +1,6 @@
 import requests
 import json
-from Line.keys import CHANNEL_ACCESS_TOKEN, me
+from keys import CHANNEL_ACCESS_TOKEN, me
 
 def sendLINE(content,to=me,CHANNEL_ACCESS_TOKEN=CHANNEL_ACCESS_TOKEN):
     #LINEアカウントにアクセスするためのトークン
@@ -14,3 +14,6 @@ def sendLINE(content,to=me,CHANNEL_ACCESS_TOKEN=CHANNEL_ACCESS_TOKEN):
     data={"to":to,"messages":[{"type":"text","text":content}]}
 
     requests.post(url,data=json.dumps(data),headers=headers)
+
+if __name__=="__main__":
+    sendLINE("テスト送信です")
